@@ -2,6 +2,9 @@ package test;
 
 import domain.Client;
 import domain.Employe;
+import domain.FiguraGeometrica;
+import domain.Person;
+import domain.Rectangulo;
 import java.util.Date;
 
 public class InheritanceTest {
@@ -22,5 +25,15 @@ public class InheritanceTest {
         Client client3 = new Client(true, new Date(), "Andres", 'M', 22, "No Limits");
         System.out.println("client3 = " + client3);
         
+        imprimir(client3, empleado1);
+         //POLIMORFISMO
+         
+         FiguraGeometrica figura = new Rectangulo("Rectangulo");
+         figura.dibujar();
+        
+    }
+    
+    public static void imprimir(Person person, Person person2) {
+        System.out.println("person = " + person.toString() + "/n" + person2.toString());
     }
 }
